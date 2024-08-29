@@ -50,7 +50,7 @@ const updateTimer = () => {
         beepLap();
         nextLapTime = startTime + (lapsCount + 1) * duration;
     }
-    fieldLapTimer.innerHTML = `${formatDuration(totalLapLeft)} (${repetitions - lapsCount})`;
+    fieldLapTimer.innerHTML = `${formatDuration(totalLapLeft)} (${repetitions - lapsCount}x)`;
     fieldTotalTimer.innerHTML = formatDuration(totalTimeLeft);
 };
 const stopTimer = (completed = true) => {

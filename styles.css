@@ -29,6 +29,7 @@
 :root {
   --size-10: 0.625rem;
   --size-20: 1.25rem;
+  --size-30: 1.875rem;
   --size-40: 2.5rem;
   --thickness-4: 4px;
   --thickness-2: 2px;
@@ -36,7 +37,8 @@
   --color-background-00: #2c2e2c;
   --color-background-01: #64eb6412;
   --color-contrast-10: #fff;
-  --color-contrast-08: #e8eee9;
+  --color-contrast-08: #b9cfbd;
+  --color-contrast-07: #a3b7a7;
   --font-main: Inter, sans-serif;
   --font-mono: Hack, monospace;
 
@@ -66,6 +68,7 @@ body {
 
 .layout-stopped {
   display: flex;
+  flex-direction: column;
   gap: var(--size-40);
 
   .running > & {
@@ -86,6 +89,7 @@ body {
     background-color: transparent;
     color: var(--color-contrast-08);
     font-size: var(--size-20);
+    font-family: var(--font-main);
   }
 }
 
@@ -103,13 +107,31 @@ body {
   font-family: var(--font-mono);
   font-size: var(--size-40);
   font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.total-timer {
+  font-size: var(--size-30);
+  color: var(--color-contrast-07);
+}
+
+.control-button {
+  align-self: center;
+  flex: 1 0 0;
+  background-color: var(--color-contrast-08);
+  color: var(--color-background-00);
+  border-radius: var(--corner-10);
+  font-size: var(--size-20);
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  padding: var(--size-20);
 }
 
 /* 
-.control-button {}
-.input-label {}
 .lap-timer {}
 .start {}
 .stop {}
-.total-timer {}
 */

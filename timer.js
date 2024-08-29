@@ -1,4 +1,5 @@
 import { beep } from "./beep.js";
+import { keepAwake } from "./keep-awake.js";
 const mainWrapper = document.querySelector(".main-wrapper");
 const inputTime = document.querySelector("#input-seconds");
 const inputReps = document.querySelector("#input-times");
@@ -26,6 +27,7 @@ const startTimer = () => {
     endTime = startTime + duration * repetitions;
     mainWrapper.classList.add("running");
     beepStart();
+    keepAwake.request();
     const intervalId = setInterval(() => updateTimer(), UPDATE_INTERVAL);
     stopInterval = () => clearInterval(intervalId);
 };
@@ -56,6 +58,7 @@ const updateTimer = () => {
 const stopTimer = (completed = true) => {
     stopInterval?.();
     completed ? beepEnd() : beepLap();
+    keepAwake.release();
     mainWrapper.classList.remove("running");
 };
 const cancelTimer = () => stopTimer(false);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <title>Training Timer</title>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <div class="layout-stopped">
+        <label class="input-label">
+          Beep every X seconds
+          <input type="number" id="input-seconds" />
+        </label>
+        <label class="input-label">
+          Stop after Y times
+          <input type="number" id="input-times" />
+        </label>
+        <button class="control-button" id="button-start">Start</button>
+      </div>
+      <div class="layout-running">
+        <p class="timer lap-timer">&nbsp;</p>
+        <p class="timer total-timer">&nbsp;</p>
+        <button class="control-button" id="button-stop">Stop</button>
+      </div>
+    </main>
+    <script type="module" src="./timer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "training-timer",
+  "version": "0.1.0",
+  "description": "Beeps every few seconds or so.",
+  "main": "dist/index.html",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && cp -r public/* dist",
+    "clean": "rimraf {dist,*.tsbuildinfo}",
+    "start": "http-server dist",
+    "deploy-app": "pnpm clean && pnpm build && gh-pages -d dist --nojekyll"
+  },
+  "author": "Henrique Müller",
+  "license": "UNLICENSED",
+  "private": "true",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.7",
+    "gh-pages": "^6.1.1",
+    "http-server": "^14.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  }
+}

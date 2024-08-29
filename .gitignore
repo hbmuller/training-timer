@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# dotenv environment variable files
+.env
+
+# Build output
+dist
+
+# Mac OS stuff
+.DS_Store
